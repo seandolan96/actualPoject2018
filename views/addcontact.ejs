@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+    <meta charset="utf-8" />
+	  <title>Add Contact</title>
+	  <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link href="contactCss.css" rel="stylesheet" type="text/css" />
+    </br>
+<% include ../partials/nav %>
+  <div class="row">
+    <h1>Welcome to the add contact page</h1><br>
+    <div class="grid-container">
+      <!-- Start form -->
+      <form accept-charset="UTF-8" action="/addcontact" method="post">
+        <div class="item">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Enter name" required/>
+          <label for="price">Comment</label>
+          <input name="comment" type="text" placeholder="Enter comment" required />
+          <label for="image">Email</label> 
+          <input id="mail" name="email" type="text" placeholder="Enter email" required />
+          <button class="button" onclick="sampleForm()">Add</button>
+        </div>
+      </form>
+      <!-- End form -->
+    </div>
+  </div>
+<% include ../partials/footer %>
+
+<!-- ** CODE REFERENCE ** -->
+<!-- CLASS NOTES -->
+<!-- W3 Schools -->

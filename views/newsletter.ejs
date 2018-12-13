@@ -1,0 +1,55 @@
+<% include ../partials/header %>
+	<meta charset="utf-8" />
+	<title>Newsletter</title>
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link href="contactCss.css" rel="stylesheet" type="text/css" />
+	</br>
+<% include ../partials/nav %>
+
+	<div id="main">
+		<h3>Sign up to Our Newsletter</h3>
+		<div id="buttonhold">
+			<input type="text" id="fname" name="firstname" placeholder="Your Name..">
+			<p id="alert1" class="alertx"></p>
+			<input type="text" id="mail" name="email" placeholder="Your Email..">
+			<p id="alert2" class="alertx"></p>
+
+		</br>
+			<button class="button" onclick="sampleForm()">Try it</button>
+		</div>
+		</br>
+	<!-- ** Start script for validation ** -->
+	<script>
+		//declare variables
+		var x, text, text2, y, text3, z, text4, zz, text5, aa;
+		function sampleForm() {//start function for form
+
+			// Code to verify the name is not empty
+			x = document.getElementById("fname").value; // this gets the value of the input field
+			if (x == "") {
+				text = "Name Can Not Be Blank";
+				document.getElementById("alert1").innerHTML = text;
+			}
+			else if (/\s+/.test(x)) {
+				text2 = "That is a Real Name";
+				alert(text2.toString());
+			}
+			//code to verify that the email is real
+			y = document.getElementById("mail").value;
+			yy = (/@/.test(y));
+			if (yy == false){
+				text3 = "That is Not a Real Email";
+				alert(text3.toString());
+			}
+			else if (yy == true){
+				text3 = "You have successfully signed up to our newsletter!";
+				document.getElementById("alert2").innerHTML = text3;
+			}
+
+		}//end function for form
+	</script>
+<% include ../partials/footer %>
+
+<!-- ** CODE REFERENCE ** -->
+<!-- CLASS NOTES -->
+<!-- W3 Schools -->

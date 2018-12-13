@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+	<meta charset="utf-8" />
+	<title>Edit Contact</title>
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+<link href="/contactCss.css" rel="stylesheet" type="text/css" />
+</br>
+<% include ../partials/nav %>
+    <% indOne.forEach(function(contacts){%>
+    <form accept-charset="UTF-8" action="/editcontact/<%= contacts.id %>" method="post">
+        
+        <div class="grid-container">
+            <div class="item">
+                <label for="name"><%= contacts.name %></label>
+                <input name="name" type="text" value='<%= contacts.name %>' required />
+                <label for="price">Comment</label>
+                <input name="comment" type="text" value='<%= contacts.Comment %>' required/>
+                <label for="image">Email</label> 
+                <input name="email" type="text" value='<%= contacts.email %>' required />
+                <button class="button">Edit</button>
+            </div>
+    </form>
+    <% }); %> 
+        </div><!-- End DIV for container -->
+<% include ../partials/footer %>
+
+<!-- ** CODE REFERENCE ** -->
+<!-- CLASS NOTES -->
+<!-- W3 Schools -->

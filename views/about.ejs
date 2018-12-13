@@ -1,0 +1,85 @@
+<!-- This is the about page which features JQuery -->
+<% include ../partials/header %>
+	<meta charset="utf-8" />
+	<title>About</title>
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link href="aboutCss.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Nav bar partials -->
+</br>
+<% include ../partials/nav %>
+
+<body>
+	<div id="wrapper">
+		<div id="email">
+			<p>Email: <b><a href="/contact">ncisound@outlook.com</b></p></a>
+		</div>
+		<!-- head picture -->
+		<img src="/about.jpg" alt="head" title="banner" />
+		
+		<!--Content 1-->
+		<div class="clearfix"></div>
+		<h1>Meet The Team!</h1>
+		<div class="con">
+			<button class="button" id="show" onclick="function()">Click Me</button>
+		</div>
+		<div class="cardRight">
+			<p  id="about"><b>Sean</b> is our light and sound tech, he has exceptional experience with club shows and bands. Sean has gained his experience from working at various festivals such as Electric Picnic and Logitude. He is currently working full time in The Wright Venue as the production manager.</p>
+		</div>
+		<div class="card" id="about1">
+			<img src="/sean.jpg" alt="Avatar" style="width:100%">
+			<div class="container1">
+				<h4><b>Sean Dolan</b></h4> 
+				<p>Sound and Lighting</p> 
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		<!--Content 2-->
+		<div class="cardLeft" id="about2">
+			<p><b>Byron</b> is our DJ specialist he manages all of our DJ equipment to make sure it's up to top spec before hire. Byron is highly skilled in maintenance and repairing of our equipment, he gained his expierence from playing gig after gig with every kind of hardware.</p>
+		</div>
+		<div class="cardTwo" id="about3">
+			<img src="/byron.jpg" alt="Avatar" style="width:100%;">
+			<div class="container2">
+				<h4><b>Byron Dunne</b></h4> 
+				<p>DJ Specialist</p> 
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		
+	<!-- This is where the script is for the slideToggle -->
+	<script>
+	//Functions for slide toggles
+	$(document).ready(function(){
+		$("#show").click(function(){
+			$("#about").slideToggle(1000);
+		});
+	});
+		
+	$(document).ready(function(){
+		$("#show").click(function(){
+			$("#about1").slideToggle(1000);
+		});
+	});
+		
+	$(document).ready(function(){
+		$("#show").click(function(){
+			$("#about2").slideToggle(1000);
+		});
+	});
+		
+	$(document).ready(function(){
+		$("#show").click(function(){
+			$("#about3").slideToggle(1000);
+		});
+	});
+	</script>
+		
+<% include ../partials/footer %>
+
+<!-- ** CODE REFERENCE ** -->
+<!-- CLASS NOTES -->
+<!-- W3 Schools -->

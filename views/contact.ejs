@@ -1,0 +1,35 @@
+<!-- This is contact for editing, deleteing and adding new contacts -->
+<% include ../partials/header %>
+	<meta charset="utf-8" />
+	<title>Contact</title>
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+<link href="contactCss.css" rel="stylesheet" type="text/css" />
+</br>
+<% include ../partials/nav %>
+ <div class="row">
+  
+    <% contact.forEach(function(contacts) { %>
+       </br>
+                <div class="item">
+                    <%= contacts.id %><br>
+                    <%= contacts.name %><br>
+                    <%= contacts.Comment %><br>
+                    <%= contacts.email %><br>
+                    </br>
+                   <button class="button"><a href="/deletecontact/<%= contacts.id %>">Delete</a></button>
+                   <button class="button"><a href="/editcontact/<%= contacts.id %>">Edit</a></button>
+               </div>
+         <% }); %>
+        </br>
+         
+         <!--Button -->
+         <div class="con">
+              <button class="button"><a href="/addcontact">New Contact</a></button>
+         </div>
+     </br>
+ </div>
+ <% include ../partials/footer %>
+ 
+ <!-- ** CODE REFERENCE ** -->
+<!-- CLASS NOTES -->
+<!-- W3 Schools -->
